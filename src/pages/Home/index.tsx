@@ -12,6 +12,7 @@ import { Link, Outlet } from "react-router-dom";
 const drawerWidth = 240;
 
 const Home = () => {
+
 	return (
 		<Box sx={{ display: "flex" }}>
 			<CssBaseline />
@@ -34,10 +35,10 @@ const Home = () => {
 					height: "100%",
 					width: drawerWidth,
 					flexShrink: 0,
-					display:{
-						md:"block",
-						sm:"none",
-						xs:"none"
+					display: {
+						md: "block",
+						sm: "none",
+						xs: "none"
 					}
 				}}
 			>
@@ -46,16 +47,16 @@ const Home = () => {
 					<List >
 						{[
 							{ name: "CoinFlip", to: "/flip", icon: './images/coin-flip-icon.png' },
-							{ name: "Crash", to: "/mines", icon: './images/crash-icon.png' },
-							{ name: "Plinko", to: "/mines", icon: './images/plinko-icon.png' },
-							{ name: "Dice", to: "/mines", icon: './images/dice-icon.png' },
-							{ name: "Lucky Wheel", to: "/mines", icon: './images/wheel-icon.png' },
+							{ name: "Crash", icon: './images/crash-icon.png' },
+							{ name: "Plinko", icon: './images/plinko-icon.png' },
+							{ name: "Dice", icon: './images/dice-icon.png' },
+							{ name: "Lucky Wheel", icon: './images/wheel-icon.png' },
 							{ name: "Mines", to: "/mines", icon: './images/mines-icon.png' },
-							{ name: "Leaderboard", to: "/mines", icon: './images/leaderboard-icon.png' },
-							{ name: "Statistics", to: "/mines", icon: './images/statistics-icon.png' },
-							{ name: "Settings", to: "/mines", icon: './images/settings-icon.png' },
+							{ name: "Leaderboard", icon: './images/leaderboard-icon.png' },
+							{ name: "Statistics", icon: './images/statistics-icon.png' },
+							{ name: "Settings", icon: './images/settings-icon.png' },
 						].map((item, index) => (
-							<Link key={index} className="link-text" to={item.to}>
+							<Link key={index} className="link-text" to={item?.to || "/"}>
 								<ListItem sx={{
 									"&:hover": {
 										color: "#01FE86",
@@ -79,12 +80,14 @@ const Home = () => {
 					</List>
 				</Box>
 			</Drawer >
-			<Box component="main" sx={{ pt:"50px", pl:"30px", minHeight: "100vh", width:{
-				md:"auto",
-				sm:"100vw",
-				xs:"100vw"
-			} }}>
-					<Outlet />
+			<Box component="main" sx={{
+				pt: "50px", pl: "30px", minHeight: "100vh",mb:2, width: {
+					md: "auto",
+					sm: "100vw",
+					xs: "100vw"
+				}
+			}}>
+				<Outlet />
 			</Box>
 		</Box >
 	);

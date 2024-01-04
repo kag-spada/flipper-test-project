@@ -84,7 +84,7 @@ const Navbar = () => {
 					</Grid>
 				</Toolbar>
 			</AppBar>
-			{/* <MessageDrawer/> */}
+			<MessageDrawer/>
 		</>
 	);
 };

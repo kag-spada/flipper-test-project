@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import CoinFlip from "./pages/CoinFlip";
 import Mines from "./pages/Mines";
+import Default from "./components/Default";
 
 const App = () => {
 	return (
@@ -15,6 +16,7 @@ const App = () => {
             <Home />
 					}
 				>
+					<Route index element={<Default/>} />
 					<Route path="flip" element={<CoinFlip />} />
 					<Route path="mines" element={<Mines/>} />
 				</Route>

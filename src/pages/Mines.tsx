@@ -25,7 +25,7 @@ const Mines = () => {
           xs: "100px"
         },
         width: {
-          md: "100%",
+          md: "80%",
           sm: "90%",
           xs: "90%"
         },
@@ -62,7 +62,7 @@ const Mines = () => {
           <Box sx={{
             position: 'absolute',
             top: '38%',
-            left: '58%',
+            left: '48%',
             transform: 'translate(-50%, -50%)',
             zIndex: 1,
           }}>
@@ -139,19 +139,12 @@ const Mines = () => {
             <Box
               component="img"
               sx={{
-                opacity: 0.1,
+                opacity: 0.5,
                 ml: 1
               }}
               src={GoldCoinBigIcon}
             />
             <Box
-              component="img"
-              sx={{
-                opacity: 0.5,
-                ml: 1
-              }}
-              src={GoldCoinBigIcon}
-            /><Box
               component="img"
               sx={{
                 opacity: 0.5,
@@ -165,28 +158,6 @@ const Mines = () => {
                 ml: 1
               }}
               src={BlackCoinBigIcon}
-            /><Box
-              component="img"
-              sx={{
-                opacity: 0.3,
-                ml: 1
-              }}
-              src={GoldCoinBigIcon}
-            /><Box
-              component="img"
-              sx={{
-                opacity: 0.2,
-                ml: 1
-              }}
-              src={GoldCoinBigIcon}
-            />
-            <Box
-              component="img"
-              sx={{
-                ml: 1,
-                opacity: 0.1,
-              }}
-              src={GoldCoinBigIcon}
             />
           </Box>
         </Box>
@@ -477,9 +448,9 @@ const Mines = () => {
           }}>
             <Grid item sx={{
               display: "flex",
-              justifyContent:{
-                sm:"center",
-                xs:"center"
+              justifyContent: {
+                sm: "center",
+                xs: "center"
               }
             }} xs={12} sm={6} md={4}>
               <PlaceBets />
@@ -487,18 +458,18 @@ const Mines = () => {
             </Grid>
             <Grid item sx={{
               display: "flex",
-              justifyContent:{
-                sm:"center",
-                xs:"center"
+              justifyContent: {
+                sm: "center",
+                xs: "center"
               }
             }} xs={12} sm={6} md={4}>
               <PlaceBets />
             </Grid>
             <Grid item sx={{
               display: "flex",
-              justifyContent:{
-                sm:"center",
-                xs:"center"
+              justifyContent: {
+                sm: "center",
+                xs: "center"
               }
             }} xs={12} sm={6} md={4}>
               <PlaceBets />
@@ -511,12 +482,12 @@ const Mines = () => {
         borderRadius: "12px",
         marginTop: "50px",
         width: {
-          md: "100%",
+          md: "80%",
           sm: "90%",
           xs: "90%"
         },
         padding: "20px",
-        
+
       }}>
         <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
           <Typography sx={{
